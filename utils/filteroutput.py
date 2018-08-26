@@ -93,7 +93,7 @@ def main():
                 if not addr.startswith("0x"):
                     addr = "0x"+addr
                     # keeping addr2line and feeding it addresses on stdin didn't seem to work smoothly
-                addr2line = subprocess.check_output(["xtensa-lx106-elf-addr2line","-pfia","-e","%s" % args.elf, addr], cwd=".").strip()
+                addr2line = subprocess.check_output(["xtensa-lx106-elf-addr2line","-pfia","-C","-e","%s" % args.elf, addr], cwd=".").strip()
                 if not addr2line.endswith(": ?? ??:0"):
                     print("\n%s\n" % addr2line.strip())
     finally:
