@@ -211,6 +211,7 @@ SECTIONS
      *****************************/
 
     _irom0_text_start = ABSOLUTE(.);
+		*sdklib*:*(.irom.* .irom.*.* .irom0.*)
     /* esp-open-rtos compiled code goes into IROM by default
        (except for libgcc which is matched above.)
 
