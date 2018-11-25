@@ -837,3 +837,5 @@ _xt_timer_int1 sdk__xt_timer_int1
 _xt_timer_int sdk__xt_timer_int
 xUserTaskHandle sdk_xUserTaskHandle
 xWatchDogTaskHandle sdk_xWatchDogTaskHandle
+printf sdk_printf
+ets_printf sdk_ets_printf
